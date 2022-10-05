@@ -3,16 +3,10 @@
 using namespace std;
 
 int main() {
-	int a, b;
-	cout << "Enter a: ";
-	cin >> a;
+	int x, y;
+	cout << "Enter x and y: " << "\n";
+	cin >> x >> y;
 
-	b = a;
-	while (b != 500) {
-		b++;
-		cout << a << "\n";
-		a += b;
-	}
-	cout << "End: " << a << endl;
+	cout << "End: " << pow(x, y) << endl;
 	return 0;
 }
