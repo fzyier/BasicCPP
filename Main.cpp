@@ -15,12 +15,25 @@ int main() {
 		cin >> d;
 
 		if (a > b) {
-			(d < a&& d > b) ? cout << "Alright!\n" : cout << "Nope!\n";
-			break;
+			if (d < a && d > b) {
+				cout << "Alright!";
+				break;
+			}
+			else {
+				cout << "Nope!\n";
+				continue;
+			}
+				
 		}
 		else if (a < b) {
-			(d > a && d < b) ? cout << "Alright!\n" : cout << "Nope!\n";
-			break;
+			if (d > a && d < b) {
+				cout << "Alrtight!";
+				break;
+			}
+			else {
+				cout << "Nope!\n";
+				continue;
+			}
 		}
 
 	} while (true);
