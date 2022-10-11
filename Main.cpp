@@ -14,13 +14,14 @@ int main() {
 
 		array[i][0] = first;
 		for (int j = 1; j < 5; j++) {
-			array[i][j] = array[i][j-1] * 2;
+			array[i][j] = array[i][j-1]+1;
 		}
 	}
 
 	for (int i = 0; i < 5; i++) {
 		for (int j = 0; j < 5; j++)
-			cout << array[i][j] << endl;
+			cout << array[i][j] << " ";
+		cout << "\t" << endl;
 	}
 	return 0;
 }
