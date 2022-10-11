@@ -16,10 +16,9 @@ int main() {
 			array[i][j] = rand() % 10;
 
 	for (int i = 0; i < row; i++) {
-		for (int j = 0; j < col; j++) {
-			cout << array[i][j] << endl;
-		}
-		cout << "\t";
+		for (int j = 0; j < col; j++)
+			cout << array[i][j] << " ";
+		cout << "\n\t" << endl;
 	}
 
 	return 0;
