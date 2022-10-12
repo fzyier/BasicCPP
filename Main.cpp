@@ -22,7 +22,18 @@ int main() {
 			cout << " " << firstArr[i][j] << " ";
 		cout << "\n";
 	}
-
-
+	cout << endl;
+	for (int i = 0; i < secondCol; i++) {
+		for (int j = 0, k = 0; j < 5; j++, k++) {
+			secondArr[i][j] = firstArr[i][k] + firstArr[i][k + 1];
+			k++;
+		}
+	}
+	for (int i = 0; i < secondCol; i++) {
+		for (int j = 0; j < secondRow; j++)
+			cout << " " << secondArr[i][j] << " ";
+		cout << "\n";
+	}
+	cout << endl;
 	return 0;
 }
