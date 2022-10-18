@@ -12,7 +12,7 @@ void PlusMinusZero(double arr[], int size) {
 		else
 			minus++;
 	}
-	cout << "Zeros: " << zero << endl << "Pluses: " << plus << "Minuses: " << minus;
+	cout << "Zeros: " << zero << endl << "Pluses: " << plus << endl << "Minuses: " << minus;
 }
 
 int main() {
