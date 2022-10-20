@@ -3,8 +3,8 @@
 
 using namespace std;
 
-template <typename T>
-void Func(T p_d, T p_i) {
+template <typename T,typename T1>
+void Func(T p_d, T1 p_i) {
 	cout << setprecision(p_i) << p_d;
 }
 
@@ -16,6 +16,6 @@ int main() {
 	cout << "Enter int:";
 	cin >> y;
 
-	Func<double>(x, y);
+	Func<double, int>(x, y);
 	return 0;
 }
