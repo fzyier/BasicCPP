@@ -1,21 +1,20 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 template <typename T>
-T Average(T arr[], const T size) {
-	int average = 0;
-	for (int i = 0; i < size; i++) {
-		average += arr[i];
-	}
-	return average/size;
+T Squere(T a, T b, T x, T c) {
+	return a*pow(x,2)+b*x+c;
+}
+
+template <typename T>
+T Linear(T a, T b, T x) {
+	return a*x+b;
 }
 
 int main() {
-	const int size = 5;
-	int arr[size] = { 1, 2, 3, 4, 5 };
-	cout << Average<int>(arr, size);
-	cout << endl;
-	cout << Average(arr, size);
+	cout << Squere<double>(1.2, 2.3, 3.4, 4.5);
+
 	return 0;
 }
