@@ -4,7 +4,7 @@
 using namespace std;
 
 template<typename T>
-int OneArray(T arr[], const T size) {
+int OneArray(T arr[5], const T size) {
 	int max = 0;
 	for (int i = 0; i < size; i++) {
 		if (max < arr[i])
@@ -13,7 +13,7 @@ int OneArray(T arr[], const T size) {
 	return max;
 }
 template<typename T>
-int TwoArray(const T size, T arr[5][5]) {
+int TwoArray(T arr[5][5], const T size) {
 	int max = 0;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
@@ -25,7 +25,7 @@ int TwoArray(const T size, T arr[5][5]) {
 }
 
 template<typename T>
-int ThreeArray(const T size, T arr[5][5][5]) {
+int ThreeArray(T arr[5][5][5], const T size) {
 	int max = 0;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
@@ -38,25 +38,41 @@ int ThreeArray(const T size, T arr[5][5][5]) {
 	return max;
 }
 
-int main() {
+template<typename T>
+int Massive(T value) {
 	srand(time(0));
-	const int size = 5;
-	int arr[size][size][size];
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			for (int k = 0; k < size; k++) {
-				arr[i][j][k] = rand() % 10;
+	if (value == 1) {
+		int arr[5];
+		for (int i = 0; i < 5; i++) {
+			arr[i] = rand() % 10;
+		}
+		return OneArray(arr,5);
+	}
+	else if (value == 2) {
+		int arr[5][5];
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				arr[i][j] = rand() % 11;
 			}
 		}
+		return TwoArray(arr,5);
 	}
-	for (int i = 0; i < size; i++) {
-		for(int j = 0; j < size; j++)
-			for(int k = 0; k < size; k++)
-				cout << arr[i][j][k];
-		cout << endl;
+	else {
+		int arr[5][5][5];
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				for (int k = 0; k < 5; k++) {
+					arr[i][j][k] = rand() % 10;
+				}
+			}
+		}
+		return ThreeArray(arr,5);
 	}
-	cout << endl;
+}
 
-	cout << ThreeArray<int>(size, arr);
+int main() {
+	cout << Massive(1) << endl;
+	cout << Massive(2) << endl;
+	cout << Massive(3) << endl;
 	return 0;
 }
