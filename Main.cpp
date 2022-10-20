@@ -14,8 +14,8 @@ T Average(T arr[], const T size) {
 int main() {
 	const int size = 5;
 	int arr[size] = { 1, 2, 3, 4, 5 };
-	cout << Average(arr, size);
-	cout << endl;
 	cout << Average<int>(arr, size);
+	cout << endl;
+	cout << Average(arr, size);
 	return 0;
 }
