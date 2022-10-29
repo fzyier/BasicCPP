@@ -10,7 +10,7 @@ int main() {
 	int num;
 	cout << "Enter a number: ";
 	cin >> num;
-	cout << PosNeg;
+	cout << PosNeg(num);
 
 	return 0;
 }
