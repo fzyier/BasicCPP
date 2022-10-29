@@ -2,21 +2,14 @@
 
 using namespace std;
 
- void Cube(int num1, int num2) {
-	 if (num1 > num2)
-		 cout << num1 << ">" << num2;
-	 else if (num1 < num2)
-		 cout << num1 << "<" << num2;
-	 else
-		 cout << num1 << "=" << num2;
+ int Cube(int num) {
+	 return num * num * num;
 }
 
 int main() {
-	int num1, num2;
+	int num1;
 	cout << "Enter a number: ";
 	cin >> num1;
-	cout << "Enter a number: ";
-	cin >> num2;
-	Cube(num1,num2);
+	cout << Cube(num1);
 	return 0;
 }
