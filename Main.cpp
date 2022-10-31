@@ -3,15 +3,16 @@
 using namespace std;
 
 void FindPow(int userNum, int num = 1, int power = 1, int max = 100) {
-	int chNum = 0;
-	for(int i = power; i <= max; i++)
-		if (pow(num, i) == userNum) {
-			chNum = (int)pow(num, power);
-			cout << userNum << " = " << num << "^" << i << endl;
+	int chNum = num;
+	for (int i = power, k = 1; k <= max; k++) {
+		if (chNum == userNum) {
+			cout << userNum << " = " << num << "^" << k << endl;
 			break;
 		}
+		chNum *= i;
+	}
 	if (chNum != userNum)
-		return FindPow(userNum, num++);
+		return FindPow(userNum, num+1,power+1);
 }
 
 int main() {
@@ -20,6 +21,6 @@ int main() {
 	cin >> num;
 	cout << "Enter a power of the number: ";
 	cin >> power;
-	FindPow(num);
+	FindPow(pow(num,power));
 	return 0;
 }
