@@ -11,20 +11,22 @@ void Output(int arr[]) {
 		cout << arr[i] << " ";
 	cout << endl;
 }
-void ReverseOutput(int arr[]) {
-	for (int i = sizeof(*arr); i >= 0; i--)
-		cout << arr[i] << " ";
-	cout << endl;
+void ReverseArray(int arr1[], int arr2[]) {
+	for (int k = 0, i = sizeof(*arr1); i >= 0; i--,k++)
+		arr2[k] = arr1[i];
 }
 int main() {
 	int size;
 	cout << "Enter a size of an array: ";
 	cin >> size;
 
-	int* arr = new int[size];
-	Random(arr);
-	Output(arr);
-	ReverseOutput(arr);
+	int* arr1 = new int[size];
+	Random(arr1);
+
+	int* arr2 = new int[size];
+	ReverseArray(arr1, arr2);
+	Output(arr1);
+	Output(arr2);
 
 
 	return 0;
