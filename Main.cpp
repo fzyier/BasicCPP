@@ -16,6 +16,7 @@ void ReverseArray(int arr1[], int arr2[]) {
 		arr2[k] = arr1[i];
 }
 int main() {
+	srand((unsigned)time(0));
 	int size;
 	cout << "Enter a size of an array: ";
 	cin >> size;
@@ -25,9 +26,11 @@ int main() {
 
 	int* arr2 = new int[size];
 	ReverseArray(arr1, arr2);
+
 	Output(arr1);
 	Output(arr2);
 
+	delete[] arr1, arr2;
 
 	return 0;
 }
