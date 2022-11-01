@@ -18,12 +18,11 @@ int main() {
 
 	int* arr = new int[size];
 
-	for (int i = 0; i < size; i++) {
+	for (int i = 0; i < size; i++)
 		arr[i] = 1 + rand() % 15;
-		cout << arr[i] << " ";
-	}
-	cout << endl;
 
 	cout << SumOfArr(arr);
+
+	delete[] arr;
 	return 0;
 }
