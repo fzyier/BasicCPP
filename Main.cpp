@@ -22,15 +22,21 @@ int main() {
 	int size = 0;
 	cout << "Enter a size of arrays: ";
 	cin >> size;
+
 	int* arr1 = new int[size];
 	Random(arr1);
 	Output(arr1);
+
 	int* arr2 = new int[size];
 	Random(arr2);
 	Output(arr2);
+
 	cout << endl;
+
 	Instead(arr1, arr2);
 	Output(arr1);
 	Output(arr2);
+
+	delete[] arr1, arr2;
 	return 0;
 }
