@@ -26,6 +26,7 @@ int main() {
 	Output(arr);
 	ReverseOutput(arr);
 
+	delete[] arr;
 
 	return 0;
 }
