@@ -2,7 +2,19 @@
 
 using namespace std;
 
-int main() {
+int MinMax(int x, int y) {
+	return(x > y) ? x : y;
+}
 
+int main() {
+	int* FirstNum = new int{};
+	int* SecondNum = new int{};
+
+	cout << "Enter a number: ";
+	cin >> *FirstNum;
+	cout << "Enter a number: ";
+	cin >> *SecondNum;
+
+	cout << MinMax(*FirstNum, *SecondNum);
 	return 0;
 }
