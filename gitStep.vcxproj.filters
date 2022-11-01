@@ -4,10 +4,30 @@
     <Filter Include="Main">
       <UniqueIdentifier>{d8c65f19-0322-41a0-8517-1e4a8dd2002b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{fa2e3a13-d8d0-4f30-870e-e93dc9a6cec9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\HeaderLib">
+      <UniqueIdentifier>{27a9ae61-ea9a-4277-98f4-df7dcb7b778c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Functions">
+      <UniqueIdentifier>{de8dd83e-2dca-4781-8c71-38055a4e85a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Functions\Random.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\MaxSingleArray.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\HeaderLib\Header.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
