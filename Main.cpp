@@ -16,5 +16,8 @@ int main() {
 	cin >> *SecondNum;
 
 	cout << MinMax(*FirstNum, *SecondNum);
+	delete FirstNum;
+	delete SecondNum;
+
 	return 0;
 }
