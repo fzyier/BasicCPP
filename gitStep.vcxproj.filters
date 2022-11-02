@@ -24,6 +24,15 @@
     <ClCompile Include="Core\Functions\MaxSingleArray.cpp">
       <Filter>Core\Functions</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Functions\MaxDoubleArray.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\MaxTripleArray.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\MaxNumber.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Header.h">

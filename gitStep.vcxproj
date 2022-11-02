@@ -129,7 +129,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Functions\MaxDoubleArray.cpp" />
+    <ClCompile Include="Core\Functions\MaxNumber.cpp" />
     <ClCompile Include="Core\Functions\MaxSingleArray.cpp" />
+    <ClCompile Include="Core\Functions\MaxTripleArray.cpp" />
     <ClCompile Include="Core\Functions\Random.cpp">
       <FileType>CppCode</FileType>
     </ClCompile>
