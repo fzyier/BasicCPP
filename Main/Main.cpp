@@ -29,7 +29,7 @@ int main() {
 
 	// Task Array
 	TaskArray(A, M, B, N);
-
+	OutputArray(A, M);
 	delete[] A, B;
 	return 0;
 }

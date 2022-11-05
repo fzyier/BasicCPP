@@ -39,30 +39,46 @@ void RandomFillArray(T* arr, const T size) {
 template <typename T>
 void TaskArray(T* A, const int sizeA, T* B, const int sizeB) {
 	int taskArraySize = 0;
-
+	// Calculating the size of the array
 	for (int i = 0; i < sizeA; i++) {
+		bool dublicate = false;
+		bool contain = false;
 
 		for (int j = i + 1; j < sizeA; j++)
-			if (A[i] == A[j] && A[i] != NULL)
-				A[j] = NULL;
+			if (A[i] == A[j])
+				dublicate = true;
 
-		for (int j = 0; j < sizeB; j++)
-			if (A[i] == B[j])
-				A[i] = NULL;
+		if (dublicate == false)
+			for (int k = 0; k < sizeB; k++)
+				if (A[i] == B[k])
+					contain = true;
+
+		if (contain == false && dublicate == false)
+			taskArraySize++;
 
 	}
 
-	for (int i = 0; i < sizeA; i++)
-		if (A[i] != NULL)
-			taskArraySize++;
-
 	T* taskArray = InitializeArray<T>(taskArraySize);
 
-	for (int i = 0, j = 0; i < sizeA; i++) {
-		if (A[i] != NULL) {
-			taskArray[j] = A[i];
-			j += 1;
+	// Adding elements to the array
+	for (int i = 0, k = 0; i < sizeA; i++) {
+		bool dublicate = false;
+		bool contain = false;
+	
+		for (int j = i + 1; j < sizeA; j++)
+			if (A[i] == A[j])
+				dublicate = true;
+	
+		if (dublicate == false)
+			for (int j = 0; j < sizeB; j++)
+				if (A[i] == B[j])
+					contain = true;
+	
+		if (contain == false && dublicate == false) {
+			taskArray[k] = A[i];
+			k+=1;
 		}
+	
 	}
 
 	OutputArray(taskArray, taskArraySize);
