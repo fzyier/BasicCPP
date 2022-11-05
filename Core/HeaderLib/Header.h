@@ -1,19 +1,6 @@
 #include <iostream>
 #include <ctime>
 
-// Functions Declaration
-template<typename T>
-T* InitializeArray(const int size);
-
-template<typename T>
-void OutputArray(T* arr, const T size);
-
-template <typename T>
-void RandomFillArray(T* arr, const T size);
-
-template <typename T>
-void TaskArray(T* A, const int sizeA, T* B, const int sizeB);
-
 // Template Functions
 template<typename T>
 T* InitializeArray(const int size) {
@@ -23,7 +10,10 @@ T* InitializeArray(const int size) {
 template<typename T>
 void OutputArray(T* arr, const T size) {
 	for (int i = 0; i < size; i++) {
-		std::cout << arr[i] << "   ";
+		if (arr[i] >= 1)
+			std::cout << arr[i] << "   ";
+		else
+			continue;
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -36,52 +26,45 @@ void RandomFillArray(T* arr, const T size) {
 	}
 }
 
-template <typename T>
-void TaskArray(T* A, const int sizeA, T* B, const int sizeB) {
-	int taskArraySize = 0;
-	// Calculating the size of the array
-	for (int i = 0; i < sizeA; i++) {
-		bool dublicate = false;
-		bool contain = false;
-
-		for (int j = i + 1; j < sizeA; j++)
-			if (A[i] == A[j])
-				dublicate = true;
-
-		if (dublicate == false)
-			for (int k = 0; k < sizeB; k++)
-				if (A[i] == B[k])
-					contain = true;
-
-		if (contain == false && dublicate == false)
-			taskArraySize++;
-
+bool isPrime(int num){
+	if (num == 1)
+		return true;
+	if (num <= 3){
+		return num > 1;
 	}
-
-	T* taskArray = InitializeArray<T>(taskArraySize);
-
-	// Adding elements to the array
-	for (int i = 0, k = 0; i < sizeA; i++) {
-		bool dublicate = false;
-		bool contain = false;
-	
-		for (int j = i + 1; j < sizeA; j++)
-			if (A[i] == A[j])
-				dublicate = true;
-	
-		if (dublicate == false)
-			for (int j = 0; j < sizeB; j++)
-				if (A[i] == B[j])
-					contain = true;
-	
-		if (contain == false && dublicate == false) {
-			taskArray[k] = A[i];
-			k+=1;
+	else if (num % 2 == 0 || num % 3 == 0){
+		return false;
+	}
+	else{
+		for (int i = 5; i * i <= num; i += 6){
+			if (num % i == 0 || num % (i + 2) == 0){
+				return false;
+			}
 		}
-	
+		return true;
+	}
+}
+
+template <typename T>
+T *TaskArray(T* arr, int size) {
+	int taskSize = 0;
+	for (int i = 0; i < size; i++) {
+		if (isPrime(arr[i]) == true)
+			arr[i] = 0;
+		else
+			taskSize++;
 	}
 
-	OutputArray(taskArray, taskArraySize);
+	T* taskArray = InitializeArray<T>(taskSize);
 
-	delete[] taskArray;
+	for (int i = 0, k = 0; i < size; i++) {
+		if (arr[i] != 0) {
+			taskArray[k] = arr[i];
+			k += 1;
+		}
+		else 
+			continue;
+	}
+
+	return taskArray;
 }

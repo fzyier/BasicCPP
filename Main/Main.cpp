@@ -11,25 +11,16 @@ https://ru.stackoverflow.com/questions/951207/%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%
 
 int main() {
 	srand((unsigned)time(0));
-	int M = 0, N = 0;
+	int size = 0;
 
-	// The First Array
 	std::cout << "Enter a size of A: ";
-	std::cin >> M;
-	int* A = InitializeArray<int>(M);
-	RandomFillArray(A, M);
-	OutputArray(A, M);
+	std::cin >> size;
+	int* arr = InitializeArray<int>(size);
+	RandomFillArray(arr, size);
+	OutputArray(arr, size);
+	arr = TaskArray(arr, size);
+	OutputArray(arr, size);
 
-	// The Second Array
-	std::cout << "Enter a size of B: ";
-	std::cin >> N;
-	int* B = InitializeArray<int>(N);
-	RandomFillArray(B, N);
-	OutputArray(B, N);
-
-	// Task Array
-	TaskArray(A, M, B, N);
-	OutputArray(A, M);
-	delete[] A, B;
+	delete[] arr;
 	return 0;
 }
