@@ -37,31 +37,79 @@ void RandomFillArray(T* arr, const T size) {
 }
 
 template <typename T>
-void TaskArray(T* A, const int sizeA, T* B, const int sizeB) {
+int TaskArraySize(T* A, const int sizeA, T* B, const int sizeB) {
 	int taskArraySize = 0;
 
 	for (int i = 0; i < sizeA; i++) {
+		bool dublicate = false;
+		bool contain = false;
 
 		for (int j = i + 1; j < sizeA; j++)
-			if (A[i] == A[j] && A[i] != NULL)
-				A[j] = NULL;
+			if (A[i] == A[j])
+				dublicate = true;
 
-		for (int j = 0; j < sizeB; j++)
-			if (A[i] == B[j])
-				A[i] = NULL;
+		if (dublicate == false)
+			for (int k = 0; k < sizeB; k++)
+				if (A[i] == B[k])
+					contain = true;
+
+		if (contain == false && dublicate == false)
+			taskArraySize++;
 
 	}
 
-	for (int i = 0; i < sizeA; i++)
-		if (A[i] != NULL)
-			taskArraySize++;
+	return taskArraySize;
+}
+
+template <typename T>
+void TaskArray(T* A, const int sizeA, T* B, const int sizeB) {
+	int taskArraySize = 0;
+
+	// Calculating the size of the array
+	taskArraySize += TaskArraySize(A, sizeA, B, sizeB);
+	taskArraySize += TaskArraySize(B, sizeB, A, sizeA);
 
 	T* taskArray = InitializeArray<T>(taskArraySize);
 
-	for (int i = 0, j = 0; i < sizeA; i++) {
-		if (A[i] != NULL) {
-			taskArray[j] = A[i];
-			j += 1;
+	// Adding elements to the array
+	for (int k = 0; k < taskArraySize;) {
+		for (int i = 0; i < sizeA; i++) {
+			bool dublicate = false;
+			bool contain = false;
+
+			for (int j = i + 1; j < sizeA; j++)
+				if (A[i] == A[j])
+					dublicate = true;
+
+			if (dublicate == false)
+				for (int j = 0; j < sizeB; j++)
+					if (A[i] == B[j])
+						contain = true;
+
+			if (contain == false && dublicate == false) {
+				taskArray[k] = A[i];
+				k += 1;
+			}
+
+		}
+		for (int i = 0; i < sizeB; i++) {
+			bool dublicate = false;
+			bool contain = false;
+
+			for (int j = i + 1; j < sizeB; j++)
+				if (B[i] == B[j])
+					dublicate = true;
+
+			if (dublicate == false)
+				for (int j = 0; j < sizeA; j++)
+					if (B[i] == A[j])
+						contain = true;
+
+			if (contain == false && dublicate == false) {
+				taskArray[k] = B[i];
+				k += 1;
+			}
+
 		}
 	}
 
