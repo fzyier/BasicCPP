@@ -1,13 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{bffc16f6-a359-47e4-8312-99979a52fa33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\HeaderLib">
+      <UniqueIdentifier>{8ab43f9d-52cd-4fdd-b0ee-34e024a26af9}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Main">
       <UniqueIdentifier>{d8c65f19-0322-41a0-8517-1e4a8dd2002b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\HeaderLib\Header.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
