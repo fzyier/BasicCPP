@@ -11,25 +11,40 @@ https://ru.stackoverflow.com/questions/951207/%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%
 
 int main() {
 	srand((unsigned)time(0));
-	int M = 0, N = 0;
+	
+	int size = 0;
+	std::cout << "Enter a size of array: ";
+	std::cin >> size;
 
-	// The First Array
-	std::cout << "Enter a size of A: ";
-	std::cin >> M;
-	int* A = InitializeArray<int>(M);
-	RandomFillArray(A, M);
-	OutputArray(A, M);
+	int* arr = AllocationDynamicMemory<int>(size);
+	InitializingArray(arr, size);
+	OutputArray(arr, size);
 
-	// The Second Array
-	std::cout << "Enter a size of B: ";
-	std::cin >> N;
-	int* B = InitializeArray<int>(N);
-	RandomFillArray(B, N);
-	OutputArray(B, N);
+	std::cout << "Add to end an element" << std::endl;
+	size++;
+	arr = AddEndElement(arr, size);
+	OutputArray(arr, size);
 
-	// Task Array
-	TaskArray(A, M, B, N);
+	size++;
+	arr = AddEndElement(arr, size);
+	OutputArray(arr, size);
 
-	delete[] A, B;
+	std::cout << "Replace Elements" << std::endl;
+	ReplaceElement(arr, size, 0, 99);
+	OutputArray(arr, size);
+
+	ReplaceElement(arr, size, 1, 99);
+	OutputArray(arr, size);
+
+	std::cout << "Deleting Elements" << std::endl;
+	size--;
+	arr = DeleteElement(arr, size, 2);
+	OutputArray(arr, size);
+
+	size--;
+	arr = DeleteElement(arr, size, 2);
+	OutputArray(arr, size);
+	std::cout << "Deleting The Array" << std::endl;
+	DeleteArray(arr);
 	return 0;
 }
