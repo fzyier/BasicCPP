@@ -11,16 +11,30 @@ https://ru.stackoverflow.com/questions/951207/%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%
 
 int main() {
 	srand((unsigned)time(0));
-	int size = 0;
+	const int size = 10;
+	int staticArr[size];
+	RandomFillArray(staticArr, size);
+	OutputArray(staticArr, size);
+	int *ptrArr = &staticArr[0];
 
-	std::cout << "Enter a size of A: ";
-	std::cin >> size;
-	int* arr = InitializeArray<int>(size);
-	RandomFillArray(arr, size);
-	OutputArray(arr, size);
-	arr = TaskArray(arr, size);
-	OutputArray(arr, size);
+	int posSize = CalcPosSize(ptrArr, size),
+		negSize = CalcNegSize(ptrArr, size),
+		zerSize = CalcZerSize(ptrArr, size);
 
-	delete[] arr;
+	int* posArr = InitializeArray<int>(posSize);
+	int* negArr = InitializeArray<int>(negSize);
+	int* zerArr = InitializeArray<int>(zerSize);
+
+	TaskArrays(ptrArr, size, posArr, negArr, zerArr);
+
+	std::cout << posSize <<" positive numbers: ";
+	OutputArray(posArr, posSize);
+	
+	std::cout << negSize <<" negative numbers: ";
+	OutputArray(negArr, negSize);
+	
+	std::cout << zerSize <<" zeros: ";
+	OutputArray(zerArr, zerSize);
+
 	return 0;
 }
