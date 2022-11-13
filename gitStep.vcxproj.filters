@@ -10,6 +10,15 @@
     <Filter Include="Main">
       <UniqueIdentifier>{d8c65f19-0322-41a0-8517-1e4a8dd2002b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Functions">
+      <UniqueIdentifier>{eff42824-7282-41ac-8b74-0c23ecb9d7b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui">
+      <UniqueIdentifier>{bc6f46bf-5a39-43dd-9f62-0241990355c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui\Dialog">
+      <UniqueIdentifier>{2ae649da-b25b-4853-92d7-86161555cc04}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
