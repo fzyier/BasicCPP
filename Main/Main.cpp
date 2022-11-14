@@ -13,5 +13,6 @@ int main() {
 
 	for (int i = 0; i < 2; i++)
 		Funcs[i](A, B, C, size);
+
 	return 0;
 }
