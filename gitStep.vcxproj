@@ -19,9 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Functions\Add.cpp" />
+    <ClCompile Include="Core\Functions\Div.cpp" />
+    <ClCompile Include="Core\Functions\Mul.cpp" />
+    <ClCompile Include="Core\Functions\Sub.cpp" />
     <ClCompile Include="Main\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\HeaderLib\Functions.h" />
     <ClInclude Include="Core\HeaderLib\Header.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
