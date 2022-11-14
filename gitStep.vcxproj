@@ -19,10 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Functions\Add.cpp" />
-    <ClCompile Include="Core\Functions\Div.cpp" />
-    <ClCompile Include="Core\Functions\Mul.cpp" />
-    <ClCompile Include="Core\Functions\Sub.cpp" />
+    <ClCompile Include="Core\Functions\PrintArrays.cpp" />
+    <ClCompile Include="Core\Functions\FillArrays.cpp" />
     <ClCompile Include="Main\Main.cpp" />
   </ItemGroup>
   <ItemGroup>

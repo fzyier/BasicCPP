@@ -2,16 +2,16 @@
 #include "../Core/HeaderLib/Functions.h"
 
 int main() {
-	double (*Funcs[4])(double, double) = { Add,Div,Mul,Sub };
+	void (*Funcs[2])(int [], int [], int [], int) = {FillArrays,PrintArrays};
 
-	double num1, num2;
-	for (int i = 0; i < 4; i++) {
-		std::cout << "Enter first double: ";
-		std::cin >> num1;
-		std::cout << "Enter second double: ";
-		std::cin >> num2;
+	int size = 0;
+	std::cout << "Enter size of arrays: ";
+	std::cin >> size;
+	int* A = new int[size];
+	int* B = new int[size];
+	int* C = new int[size];
 
-		std::cout << Funcs[i](num1, num2) << std::endl << std::endl;
-	}
+	for (int i = 0; i < 2; i++)
+		Funcs[i](A, B, C, size);
 	return 0;
 }
