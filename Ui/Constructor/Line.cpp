@@ -21,8 +21,10 @@ void Line(std::string name, int maxNameLength, bool center = false, bool boolNum
 		SetColorWhite();
 		std::cout << '|';
 	}
-	else
+	else {
+		SetColorBlue();
 		std::cout << ' ' << ' ' << '|';
+	}
 
 	SetColorGreen();
 	if (center == true)
@@ -42,8 +44,10 @@ void Line(std::string name, int maxNameLength, bool center = false, bool boolNum
 		SetColorWhite();
 		std::cout << '|';
 	}
-	else
+	else {
+		SetColorBlue();
 		std::cout << '|';
+	}
 	SetColorWhite();
 	std::cout << std::endl;
 }

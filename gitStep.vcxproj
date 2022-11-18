@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Functions\AllClients.cpp" />
+    <ClCompile Include="Core\Functions\MaxLength.cpp" />
+    <ClCompile Include="Core\Functions\MostPopular.cpp" />
+    <ClCompile Include="Core\Functions\Profit.cpp" />
     <ClCompile Include="Main\Main.cpp" />
     <ClCompile Include="Ui\Colors\Colors.cpp" />
     <ClCompile Include="Ui\Constructor\HeadLine.cpp" />
@@ -27,10 +31,13 @@
     <ClCompile Include="Ui\Constructor\Split.cpp" />
     <ClCompile Include="Ui\Dialog\Menu.cpp" />
     <ClCompile Include="Ui\Dialog\Input.cpp" />
+    <ClCompile Include="Ui\Dialog\Packages.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Colors.h" />
     <ClInclude Include="Core\HeaderLib\Constructor.h" />
+    <ClInclude Include="Core\HeaderLib\Data.h" />
+    <ClInclude Include="Core\HeaderLib\Functions.h" />
     <ClInclude Include="Core\HeaderLib\Header.h" />
     <ClInclude Include="Core\HeaderLib\Interface.h" />
   </ItemGroup>

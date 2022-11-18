@@ -51,6 +51,21 @@
     <ClCompile Include="Ui\Dialog\Input.cpp">
       <Filter>Ui\Dialog</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Functions\AllClients.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\MostPopular.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\Profit.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\MaxLength.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Dialog\Packages.cpp">
+      <Filter>Ui\Dialog</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Header.h">
@@ -63,6 +78,12 @@
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
     <ClInclude Include="Core\HeaderLib\Interface.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Data.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Functions.h">
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
   </ItemGroup>

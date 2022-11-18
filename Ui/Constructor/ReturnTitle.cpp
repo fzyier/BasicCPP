@@ -4,7 +4,7 @@ std::string ReturnTitle(std::string title) {
 	if (title != "") {
 		std::string copyTitle = " ";
 
-		for (short i = 0; i < title.length(); i++)
+		for (int i = 0; i < title.length(); i++)
 			copyTitle = copyTitle + title[i] + ' ';
 
 		return copyTitle;

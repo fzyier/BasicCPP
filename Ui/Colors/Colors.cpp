@@ -8,11 +8,11 @@ void SetColorBrown() {
 }
 
 void SetColorGreen() {
-	SetConsoleTextAttribute(hConsole, 10);
+	SetConsoleTextAttribute(hConsole, 2);
 }
 
 void SetColorBlue() {
-	SetConsoleTextAttribute(hConsole, 11);
+	SetConsoleTextAttribute(hConsole, 3);
 }
 
 void SetColorRed() {
