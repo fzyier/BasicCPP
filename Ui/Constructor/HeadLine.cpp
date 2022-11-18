@@ -2,18 +2,29 @@
 #include "../../Core/HeaderLib/Colors.h"
 #include "../../Core/HeaderLib/Constructor.h"
 
-void HeadLine(short length, std::string title) {
-	if (length >= length - ReturnTitle(title).length()) {
+void HeadLine(std::string title, int length) {
+	size_t trueNum = length - ReturnTitle(title).length();
+
+	if (length >= ReturnTitle(title).length()) {
 		SetColorBlue();
 		std::cout << ' ' << ' ' << '#';
-		for (short i = 0; i <= length - ReturnTitle(title).length(); i++) {
-			if (i != ((length - ReturnTitle(title).length()) / 2))
-				(length - ReturnTitle(title).length() == 1) ? std::cout << " " : std::cout << "=";
-			else
+
+		if (trueNum % 2 != 0)
+			trueNum = trueNum - 1;
+
+		for (short i = 0; i <= trueNum; i++) {
+
+			if (i == trueNum / 2) {
 				std::cout << ReturnTitle(title);
+			}
+
+			else
+				std::cout << "=";
+
 		}
 		std::cout << '#' << std::endl;
 		SetColorWhite();
+
 	}
 	else {
 		SetColorRed();

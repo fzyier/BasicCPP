@@ -10,14 +10,59 @@
     <Filter Include="Main">
       <UniqueIdentifier>{d8c65f19-0322-41a0-8517-1e4a8dd2002b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Functions">
+      <UniqueIdentifier>{7e60fed4-8e58-4300-9711-3dfc8beb6cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui">
+      <UniqueIdentifier>{5502b6ae-15af-4f3d-9434-99884ddd0ebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui\Dialog">
+      <UniqueIdentifier>{a5a0ce75-ae6a-4889-8fa6-2006fdb9a55f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui\Colors">
+      <UniqueIdentifier>{b53ce344-b248-4ddd-8290-2beddd9c4237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui\Constructor">
+      <UniqueIdentifier>{67cdf148-6f90-459e-a571-2921077c5ba3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Ui\Colors\Colors.cpp">
+      <Filter>Ui\Colors</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Constructor\HeadLine.cpp">
+      <Filter>Ui\Constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Constructor\Split.cpp">
+      <Filter>Ui\Constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Constructor\ReturnTitle.cpp">
+      <Filter>Ui\Constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Constructor\Line.cpp">
+      <Filter>Ui\Constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Dialog\Menu.cpp">
+      <Filter>Ui\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\Dialog\Input.cpp">
+      <Filter>Ui\Dialog</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Header.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Colors.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Constructor.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Interface.h">
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
   </ItemGroup>

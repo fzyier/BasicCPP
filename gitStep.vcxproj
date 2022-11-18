@@ -26,11 +26,13 @@
     <ClCompile Include="Ui\Constructor\ReturnTitle.cpp" />
     <ClCompile Include="Ui\Constructor\Split.cpp" />
     <ClCompile Include="Ui\Dialog\Menu.cpp" />
+    <ClCompile Include="Ui\Dialog\Input.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Colors.h" />
     <ClInclude Include="Core\HeaderLib\Constructor.h" />
     <ClInclude Include="Core\HeaderLib\Header.h" />
+    <ClInclude Include="Core\HeaderLib\Interface.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -1,135 +1,54 @@
-#include "../../Core/HeaderLib/Header.h"
+﻿#include "../../Core/HeaderLib/Header.h"
 #include "../../Core/HeaderLib/Colors.h"
 
-//		   |___      |
-void Line(short length, std::string name) {
-	if (length >= length - name.length()) {
-		SetColorBlue();
-		std::cout << ' ' << ' ' << '|';
-		SetColorGreen();
-		std::cout << name;
-		SetColorBlue();
-		for (short i = 0; i < length - name.length(); i++)
-			std::cout << " ";
-
-		std::cout << '|' << std::endl;
-		SetColorWhite();
-	}
-	else {
+void Line(std::string name, int maxNameLength, bool center = false, bool boolNumeration = false, int numeration = 0) {
+	if (maxNameLength < name.length()) {
 		SetColorRed();
-		std::cout << "Name is longer than length!" << std::endl;
-		SetColorWhite();
-	}
-}
-
-//		   |   ___   |
-void Line(short length, std::string name, bool center) {
-	if (length >= length - name.length()) {
-		SetColorBlue();
-		std::cout << ' ' << ' ' << '|';
-		for (short i = 0; i <= length - name.length(); i++) {
-			if (i == (length - name.length())/2) {
-				SetColorGreen();
-				std::cout << name;
-				SetColorBlue();
-			}
-			else
-				std::cout << " ";
-		}
-
-		std::cout << '|' << std::endl;
-		SetColorWhite();
-	}
-	else {
-		SetColorRed();
-		std::cout << "Name is longer than length!" << std::endl;
-		SetColorWhite();
-	}
-}
-
-//		 |_|___      |_|
-void Line(short length, std::string name, int numeration) {
-		if (numeration > 10) {
-			SetColorRed();
-			std::cout << "Numeration is more than 9!" << std::endl;
-			SetColorWhite();
-			return;
-		}
-
-		if (length >= length - name.length()) {
-			SetColorBlue();
-			std::cout << '|'; 
-			SetColorBrown();
-			std::cout << numeration; 
-			SetColorBlue();
-			std::cout << '|';
-			SetColorGreen();
-			std::cout << name;
-			SetColorBlue();
-			for (short i = 0; i < (length - name.length()); i++)
-				std::cout << " ";
-
-			SetColorBlue();
-			std::cout << '|';
-			SetColorBrown();
-			std::cout << numeration;
-			SetColorBlue();
-			std::cout << '|';
-			std::cout << std::endl;
-			SetColorWhite();
-		}
-		else {
-			SetColorRed();
-			std::cout << "Name is longer than length!" << std::endl;
-			SetColorWhite();
-		}
-}
-
-//		 |_|   ___   |_|
-void Line(short length, std::string name, bool center, int numeration) {
-	if (numeration > 10) {
-		SetColorRed();
-		std::cout << "Numeration is more than 9!" << std::endl;
+		std::cout << "Name is longer than maxNameLength!";
 		SetColorWhite();
 		return;
 	}
-
-	if (length >= length - name.length()) {
-		SetColorBlue();
-		std::cout << '|';
-		SetColorBrown();
-		std::cout << numeration;
-		SetColorBlue();
-		std::cout << '|';
-
-		for (short i = 0; i <= (length - name.length()); i++) {
-			if (i == (length - name.length()) / 2) {
-				SetColorGreen();
-				std::cout << name;
-				SetColorBlue();
-			}
-			else
-				std::cout << " ";
-		}
-
-		SetColorBlue();
-		std::cout << '|';
-		SetColorBrown();
-		std::cout << numeration;
-		SetColorBlue();
-		std::cout << '|';
-		std::cout << std::endl;
-		SetColorWhite();
-	}
-	else {
+	if (numeration > 9 || numeration < 0) {
 		SetColorRed();
-		std::cout << "Name is longer than length!" << std::endl;
+		std::cout << "Numeration must be between 0-9!";
 		SetColorWhite();
+		return;
 	}
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorBrown();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << ' ' << ' ' << '|';
+
+	SetColorGreen();
+	if (center == true)
+		for (int i = 0; i <= maxNameLength - name.length(); i++)
+			(((maxNameLength - name.length()) / 2) == i) ? std::cout << name : std::cout << ' ';
+	else {
+		std::cout << name;
+		for (int i = 0; i < maxNameLength - name.length(); i++)
+			std::cout << ' ';
+	}
+
+	SetColorWhite();
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorBrown();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << '|';
+	SetColorWhite();
+	std::cout << std::endl;
 }
 
-//				 |___      |___      |
-void Line(std::string name, short maxNameLength, std::string info, short maxInfoLength) {
+void Line(std::string name, int maxNameLength, std::string info, int maxInfoLength, bool center = false, bool boolNumeration = false, int numeration = 0) {
 	if (name.length() > maxNameLength) {
 		SetColorRed();
 		std::cout << "Name is longer than maxNameLength!";
@@ -142,27 +61,137 @@ void Line(std::string name, short maxNameLength, std::string info, short maxInfo
 		SetColorWhite();
 		return;
 	}
+	if (numeration > 9 || numeration < 0) {
+		SetColorRed();
+		std::cout << "Numeration must be between 0-9!";
+		SetColorWhite();
+		return;
+	}
+
 	SetColorBlue();
-	std::cout << ' ' << ' ' << '|';
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorBrown();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << ' ' << ' ' << '|';
+		
 	SetColorPurple();
-	std::cout << name;
-	for(short i = 0; i < maxNameLength-name.length(); i++)
-		std::cout << ' ';
+
+	if(center == true)
+	for (int i = 0; i <= maxNameLength - name.length(); i++)
+		(((maxNameLength - name.length())/2) == i) ? std::cout << name : std::cout << ' ';
+	else {
+		std::cout << name;
+		for (int i = 0; i < maxNameLength - name.length(); i++)
+			std::cout << ' ';
+	}
 	std::cout << ':';
+
 	SetColorGreen();
-	std::cout << info;
-	for (short i = 0; i < maxInfoLength - info.length(); i++)
-		std::cout << ' ';
+	if(center == true)
+	for (int i = 0; i <= maxInfoLength - info.length(); i++)
+		(((maxInfoLength - info.length()) / 2) == i) ? std::cout << info : std::cout << ' ';
+	else {
+		std::cout << info;
+		for (int i = 0; i < maxInfoLength - info.length(); i++)
+			std::cout << ' ';
+	}
+
 	SetColorBlue();
-	std::cout << '|';
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorBrown();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << '|';
 	SetColorWhite();
 	std::cout << std::endl;
 }
 
-//		   |   ___   |   ___   |
+void BACK(int length, bool center = false, bool boolNumeration = false, int numeration = 0) {
+	int backLength = 4;
+	if (length < backLength) {
+		SetColorRed();
+		std::cout << "Length is longer than \"Back\" length!";
+		SetColorWhite();
+		return;
+	}
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorRed();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << ' ' << ' ' << '|';
 
+	SetColorRed();
+	if(center == true)
+	for (int i = 0; i <= length - backLength; i++)
+		(i == (length - backLength) / 2) ? std::cout << "BACK" : std::cout << ' ';
+	else {
+		std::cout << "BACK";
+		for (int i = 0; i <= length - backLength; i++)
+			std::cout << ' ';
+	}
+	SetColorWhite();
 
-//		 |_|___      |___      |_|
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorRed();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << '|';
+	std::cout << std::endl;
+}
+void EXIT(int length, bool center = false, bool boolNumeration = false, int numeration = 0) {
+	int backLength = 4;
+	if (length < backLength) {
+		SetColorRed();
+		std::cout << "Length is longer than \"Exit\" length!";
+		SetColorWhite();
+		return;
+	}
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorDarkRed();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << ' ' << ' ' << '|';
 
+	SetColorDarkRed();
+	if (center == true)
+		for (int i = 0; i <= length - backLength; i++)
+			(i == (length - backLength) / 2) ? std::cout << "EXIT" : std::cout << ' ';
+	else {
+		std::cout << "EXIT";
+		for (int i = 0; i <= length - backLength; i++)
+			std::cout << ' ';
+	}
+	SetColorWhite();
 
-//		 |_|   ___   |   ___   |_|
+	if (boolNumeration == true) {
+		std::cout << '|';
+		SetColorDarkRed();
+		std::cout << numeration;
+		SetColorWhite();
+		std::cout << '|';
+	}
+	else
+		std::cout << '|';
+	std::cout << std::endl;
+}

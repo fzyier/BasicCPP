@@ -1,23 +1,14 @@
 #include "../Core/HeaderLib/Header.h"
-#include "../Core/HeaderLib/Constructor.h"
-
-// # must have a pair!
-// HeadLine!
+#include "../Core/HeaderLib/Interface.h"
 
 int main() {
-	HeadLine(9, "AB");
-	Split(10, '-');
-	Line(10, "Add");
-	Split(10, '-');
-	Line(10, "Sub", true);
-	Split(10, '-');
-	Line(10, "Div", 4);
-	Line(10, "Div", 11);
-	Split(10, '-');
-	Line(10, "Mul", true, 9);
-	HeadLine(10, "MAIN");
+	MainMenu();
 	std::cout << std::endl;
-	HeadLine(16, "SECOND");
-	Line("AAAAA", 5, "AAAAAAAAAA", 10);
+	MainClient();
+	std::cout << std::endl;
+	MainPackage();
+	std::cout << std::endl;
+	MainProfit();
+	std::cout << std::endl;
 	return 0;
 }

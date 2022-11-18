@@ -23,8 +23,8 @@ void SetColorPurple() {
 	SetConsoleTextAttribute(hConsole, 13);
 }
 
-void SetColorYellow() {
-	SetConsoleTextAttribute(hConsole, 14);
+void SetColorDarkRed() {
+	SetConsoleTextAttribute(hConsole, 4);
 }
 
 void SetColorWhite() {
