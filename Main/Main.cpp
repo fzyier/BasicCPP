@@ -7,6 +7,7 @@ int main() {
 	int input = NULL;
 
 	do {
+		Sleep(200);
 		MainMenu();
 		input = Input();
 		switch (input) {
