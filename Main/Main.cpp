@@ -5,18 +5,14 @@ int main() {
 	char arr[size];
 	fgets(arr, size, stdin);
 
-	int digits = 0, alphas = 0, other = 0;
-	for (char* i = arr; *i; i++) {
-		if (isdigit(*i))
-			digits++;
-		else if (isalpha(*i))
-			alphas++;
-		else
-			other++;
-	}
+	for (int i = 0, j = strlen(arr) - 1; i < j; ++i, --j) {
+		if (arr[i] == arr[j]) {
+			std::cout << "False";
+			return 0;
+		}
 
-	std::cout << "Digits = " << digits << std::endl;
-	std::cout << "Alphas = " << alphas << std::endl;
-	std::cout << "Other = " << other << std::endl; // '/0' is a symbol.
+	}
+	std::cout << "True";
+	
 	return 0;
 }
