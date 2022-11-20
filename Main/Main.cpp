@@ -9,7 +9,7 @@ int main() {
 		if (*i == ' ')
 			*i = '\t';
 
-	std::cout << arr;
+	puts(arr);
 
 	return 0;
 }
