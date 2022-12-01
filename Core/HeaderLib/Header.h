@@ -2,6 +2,10 @@
 
 
 
+int NumberToString(char* str) {
+	return (int)((*str) - 48);
+}
+
 int mystrcmp(const char* str1, const char* str2) {
 	int size1(0), size2(0);
 	for (size_t i = 0; str1[i] != '\0'; i++)
