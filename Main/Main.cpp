@@ -1,7 +1,7 @@
 #include "../Core/HeaderLib/Header.h"
 
 int main() {
-	char ch = '7';
-	std::cout << NumberToString(&ch);
+	int ch = 7;
+	std::cout << *StringToNumber(ch);
 	return 0;
 }

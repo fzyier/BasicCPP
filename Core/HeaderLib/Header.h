@@ -1,5 +1,6 @@
 #include <iostream>
 
-int NumberToString(char *str) {
-	return (int)((*str) - 48);
+char* StringToNumber(int number) {
+	char ch = number+48;
+	return &ch;
 }
