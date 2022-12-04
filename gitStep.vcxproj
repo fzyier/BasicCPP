@@ -19,9 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Functions\FillArr.cpp" />
+    <ClCompile Include="Core\Functions\PrintArr.cpp" />
     <ClCompile Include="Main\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\HeaderLib\Functions.h" />
     <ClInclude Include="Core\HeaderLib\Header.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

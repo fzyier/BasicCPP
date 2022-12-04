@@ -1,41 +1,30 @@
-#include "Header.h"
-
-using namespace std;
-
-void Initializing_surnames(string* surnames, int size) {
-	for (size_t i = 0; i < size; i++) {
-		cout << "Enter: ";
-		cin >> surnames[i];
-	}
-}
-void Initializing_print(string* surnames, int size) {
-	for (size_t i = 0; i < size; i++) {
-		cout << surnames[i] << " ";
-	}
-	cout << endl;
-}
-void SortArray(string* surnames, int size) {
-	for (int i = 1; i < size; i++)
-	{
-		string temp = surnames[i];
-
-		int j = i - 1;
-		while (j >= 0 && temp.length() < surnames[j].length())
-		{
-			surnames[j + 1] = surnames[j];
-			j--;
-		}
-		surnames[j + 1] = temp;
-	}
-}
+#include "../Core/HeaderLib/Header.h"
+#include "../Core/HeaderLib/Functions.h"
 
 int main() {
-	int size = 5;
-	string* surnames = new string[size];
+	srand(time(0));
 
-	Initializing_surnames(surnames, size);
-	Initializing_print(surnames, size);
-	SortArray(surnames, size);
-	Initializing_print(surnames, size);
+	int col_A, row_A;
+	std::cout << "Col A: ";
+	std::cin >> col_A;
+	std::cout << "Col A: ";
+	std::cin >> row_A;
+	int **A = RandomFill<int>(col_A,row_A);
+	PrintArr(A, col_A, row_A);
 
+	int col_B, row_B;
+	std::cout << "Col A: ";
+	std::cin >> col_B;
+	std::cout << "Col A: ";
+	std::cin >> row_B;
+	int** B = RandomFill<int>(col_B, row_B);
+	PrintArr(B, col_B, row_B);
+
+	int col_C, row_C;
+	std::cout << "Col C: ";
+	std::cin >> col_C;
+	std::cout << "Col C: ";
+	std::cin >> row_C;
+	int** C = RandomFill<int>(col_C, row_C);
+	PrintArr(C, col_C, row_C);
 }

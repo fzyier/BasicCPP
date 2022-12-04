@@ -10,14 +10,26 @@
     <Filter Include="Main">
       <UniqueIdentifier>{d8c65f19-0322-41a0-8517-1e4a8dd2002b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Functions">
+      <UniqueIdentifier>{4f0ae887-13c9-4816-af96-1df9e089dffa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Functions\FillArr.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Functions\PrintArr.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Header.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Functions.h">
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
   </ItemGroup>
