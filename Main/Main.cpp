@@ -1,51 +1,25 @@
 #include "../Core/HeaderLib/Header.h"
 
 int main() {
-	//Mystrcmp
-	const char* str1 = { "Hello!" };
-	const char* str2 = { "Hello!" };
-	std::cout << mystrcmp(str1,str2) << std::endl;
-	
-	//NumberToString
-	std::cout << *NumberToString(7) << std::endl;
-	
-	//StringToNumber
-	char  ch = '1';
-	std::cout << StringToNumber(&ch);
-	 
-	//Upper Case
-	std::cout << std::endl << ">  UPPER CASE\n";
-	char str3[] = {"hello"};
-	
-	for (int i = 0; str3[i] != '\0'; i++)
-		std::cout << str3[i] << " ";
-	
-	std::cout << std::endl;
-	
-	*str3 = *(Uppercase(&str3[0]));
-	for (int i = 0; str3[i] != '\0'; i++)
-		std::cout << str3[i] << " ";
-	
-	//Lower Case
-	std::cout << std::endl << ">  LOWERCASE\n";
-	char str4[] = { "HELLO" };
-	
-	for (int i = 0; str4[i] != '\0'; i++)
-		std::cout << str4[i] << " ";
-	std::cout << std::endl;
-	
-	*str4 = *(Lowercase(&str4[0]));
-	
-	for (int i = 0; str4[i] != '\0'; i++)
-		std::cout << str4[i] << " ";
-	std::cout << std::endl;
-
-	//Reverse
-	char* str5 = new char[32] {"Hello"};
-	str5 = mystrrev(str5);
-
-	for (int i = 0; i < 32; i++)
-		std::cout << str5[i] << " ";
-
-	return 0;
+	////mystrlen
+	//const char* str1 = { "HELLO!" };
+	//int str1_length = mystrlen(str1);
+	//std::cout << str1_length << std::endl;
+	////mystrcpy
+	//const char* str2 = { "Heyka!" };
+	//char* str2_p = nullptr;
+	//str2_p = mystrcpy(str2_p, str2);
+	////mystrcat
+	//const char* str3 = { "qq!" };
+	//char* str3_p = new char[4] {"Hi!"};
+	//str3_p = mystrcat(str3_p, str3);
+	////mystrchr
+	//char* str4_p = new char[11] {"What's up!"};
+	//str4_p = mystrchr(str4_p, 'u');
+	//mystrstr
+	char* str5 = new char[7] {"dnnddn"};
+	char* str5_sub = new char[4] {"nnd"};
+	char* str5_p = mystrstr(str5, str5_sub);
+	for (int i = 0; str5_p[i] != '\0'; i++)
+		std::cout << str5_p[i] << " ";
 }
