@@ -1,39 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Core">
-      <UniqueIdentifier>{bffc16f6-a359-47e4-8312-99979a52fa33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core\HeaderLib">
-      <UniqueIdentifier>{8ab43f9d-52cd-4fdd-b0ee-34e024a26af9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Main">
       <UniqueIdentifier>{d8c65f19-0322-41a0-8517-1e4a8dd2002b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Functions">
-      <UniqueIdentifier>{eff42824-7282-41ac-8b74-0c23ecb9d7b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Ui">
-      <UniqueIdentifier>{bc6f46bf-5a39-43dd-9f62-0241990355c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Ui\Dialog">
-      <UniqueIdentifier>{2ae649da-b25b-4853-92d7-86161555cc04}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\Main.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Functions\FillArray.cpp">
-      <Filter>Core\Functions</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Core\HeaderLib\Header.h">
-      <Filter>Core\HeaderLib</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\HeaderLib\Functions.h">
-      <Filter>Core\HeaderLib</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
