@@ -24,9 +24,15 @@
     <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Functions\FillArray.cpp">
+      <Filter>Core\Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Header.h">
+      <Filter>Core\HeaderLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HeaderLib\Functions.h">
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
   </ItemGroup>
