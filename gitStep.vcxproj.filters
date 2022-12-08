@@ -18,12 +18,6 @@
     <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Functions\FillArr.cpp">
-      <Filter>Core\Functions</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Functions\PrintArr.cpp">
-      <Filter>Core\Functions</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\HeaderLib\Header.h">
