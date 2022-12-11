@@ -23,8 +23,5 @@
     <ClInclude Include="Core\HeaderLib\Header.h">
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
-    <ClInclude Include="Core\HeaderLib\Functions.h">
-      <Filter>Core\HeaderLib</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
