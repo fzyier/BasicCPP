@@ -33,7 +33,7 @@ void phone_model() {
 	std::cout << '\t' << char(179) << char(219) << char(233) << char(233) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(179) << std::endl;
 	std::cout << '\t' << char(186) << char(219) << char(233) << char('0') << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(186) << std::endl;
 	std::cout << '\t' << char(179) << char(219) << char(233) << char(248) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(186) << std::endl;
-	std::cout << '\t' << char(179) << char(219) << char(219) << char(219) << char(219) << char('J') << char(219) << char(219) << char(219) << char(219) << char(179) << std::endl;
+	std::cout << '\t' << char(179) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(179) << std::endl;
 	std::cout << '\t' << char(179) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(179) << std::endl;
 	std::cout << '\t' << char(179) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(179) << std::endl;
 	std::cout << '\t' << char(179) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << char(179) << std::endl;
