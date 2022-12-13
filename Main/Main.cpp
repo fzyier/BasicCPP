@@ -1,8 +1,8 @@
 #include "../Core/HeaderLib/Header.h"
 
 int main() {
-	Iron* iron = new Iron;
-	iron->Input();
-	iron->Print();
-	delete iron;
+	Boiler* boiler = new Boiler;
+	boiler->Input();
+	boiler->Print();
+	delete boiler;
 }
