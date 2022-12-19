@@ -34,10 +34,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="file1.txt">
-      <Filter>Main\Files</Filter>
-    </Text>
-    <Text Include="file2.txt">
+    <Text Include="file.txt">
       <Filter>Main\Files</Filter>
     </Text>
   </ItemGroup>

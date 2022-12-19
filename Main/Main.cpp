@@ -4,28 +4,40 @@
 #include <string>
 #include "../Core/HeaderLib/Header.h"
 
+
 int main() {
-	char file1_path[] = "file1.txt";
-	char file1_text[256] = {};
-	FILE* file1 = fopen(file1_path, "r");
+	char file_path[] = "file.txt";
+	char file_text[256] = {};
+	FILE* file = fopen(file_path, "r");
 
-	char file2_path[] = "file2.txt";
-	char file2_text[256] = {};
-	FILE* file2 = fopen(file2_path, "r");
+	size_t letters = 0;
+	size_t lines = 0;
+	size_t letters_vowel = 0;
+	size_t letters_consonant = 0;
+	size_t numbers = 0;
 
-	while (fgets(file1_text,256,file1)) {
-		fgets(file2_text, 256, file2);
+	while (fgets(file_text,256,file)) {
+		lines++;
+		for (size_t i = 0; i < strlen(file_text); i++) {
+			if (isdigit(file_text[i]))
+				numbers++;
 
-		for (size_t i = 0; i < strlen(file2_text) || i < strlen(file1_text); i++) {
-			if (file1_text[i] != file2_text[i]) {
-				std::cout << "FILE1: " << file1_text << std::endl;
-				std::cout << "FILE2: " << file2_text << std::endl;
-				break;
-			}
+			if (tolower(file_text[i]) == 'a' || tolower(file_text[i]) == 'e' || tolower(file_text[i]) == 'i' ||
+				tolower(file_text[i]) == 'o' || tolower(file_text[i]) == 'u')
+				letters_vowel++;
+			if ((tolower(file_text[i]) != 'a' || tolower(file_text[i]) != 'e' || tolower(file_text[i]) != 'i' ||
+				tolower(file_text[i]) != 'o' || tolower(file_text[i]) != 'u') && isalpha(file_text[i]))
+				letters_consonant++;
 		}
+		letters += strlen(file_text);
 	}
 
-	fclose(file1);
-	fclose(file2);
+	std::cout << "Letters: " << letters-lines+1 << std::endl;
+	std::cout << "Lines: " << lines << std::endl;
+	std::cout << "Vowel letters: " << letters_vowel << std::endl;
+	std::cout << "Consonant letters: " << letters_consonant << std::endl;
+	std::cout << "Numbers: " << numbers << std::endl;
+
+	fclose(file);
 	return 0;
 } 

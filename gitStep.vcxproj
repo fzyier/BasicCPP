@@ -25,8 +25,7 @@
     <ClInclude Include="Core\HeaderLib\Header.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="file1.txt" />
-    <Text Include="file2.txt" />
+    <Text Include="file.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
