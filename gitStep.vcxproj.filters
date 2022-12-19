@@ -19,6 +19,9 @@
     <Filter Include="Ui\Dialog">
       <UniqueIdentifier>{2ae649da-b25b-4853-92d7-86161555cc04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\Files">
+      <UniqueIdentifier>{ea5edbf9-e423-455a-b30d-9de7c56eead9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
@@ -29,5 +32,13 @@
     <ClInclude Include="Core\HeaderLib\Header.h">
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="file1.txt">
+      <Filter>Main\Files</Filter>
+    </Text>
+    <Text Include="file2.txt">
+      <Filter>Main\Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
