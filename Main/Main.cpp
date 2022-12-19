@@ -7,36 +7,21 @@
 
 int main() {
 	char file_path[] = "file.txt";
-	char file_text[256] = {};
-	FILE* file = fopen(file_path, "r");
+	char file_text[256];
+	FILE* file = fopen(file_path, "w");
 
-	size_t letters = 0;
-	size_t lines = 0;
-	size_t letters_vowel = 0;
-	size_t letters_consonant = 0;
-	size_t numbers = 0;
+	printf("Enter line: ");
+	scanf("%[^\n]s",file_text);
 
-	while (fgets(file_text,256,file)) {
-		lines++;
-		for (size_t i = 0; i < strlen(file_text); i++) {
-			if (isdigit(file_text[i]))
-				numbers++;
-
-			if (tolower(file_text[i]) == 'a' || tolower(file_text[i]) == 'e' || tolower(file_text[i]) == 'i' ||
-				tolower(file_text[i]) == 'o' || tolower(file_text[i]) == 'u')
-				letters_vowel++;
-			if ((tolower(file_text[i]) != 'a' || tolower(file_text[i]) != 'e' || tolower(file_text[i]) != 'i' ||
-				tolower(file_text[i]) != 'o' || tolower(file_text[i]) != 'u') && isalpha(file_text[i]))
-				letters_consonant++;
-		}
-		letters += strlen(file_text);
+	for (size_t i = 0;file_text[i]!='\0'; i++) {
+		if ((int)file_text[i] + 3 > 122)
+			file_text[i] = 97 + ((file_text[i] + 3) - 122);
+		else
+			file_text[i] += 3;
 	}
 
-	std::cout << "Letters: " << letters-lines+1 << std::endl;
-	std::cout << "Lines: " << lines << std::endl;
-	std::cout << "Vowel letters: " << letters_vowel << std::endl;
-	std::cout << "Consonant letters: " << letters_consonant << std::endl;
-	std::cout << "Numbers: " << numbers << std::endl;
+	fputs(file_text, file);
+	
 
 	fclose(file);
 	return 0;

@@ -33,9 +33,4 @@
       <Filter>Core\HeaderLib</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="file.txt">
-      <Filter>Main\Files</Filter>
-    </Text>
-  </ItemGroup>
 </Project>
