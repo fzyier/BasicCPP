@@ -15,12 +15,7 @@ int main() {
 
 	while (fgets(file1_text,256,file1)) {
 		fgets(file2_text, 256, file2);
-		bool a = file1_text == file2_text;
-		//if (file1_text[0-strlen(file1_text)] != file2_text[0-strlen(file2_text)]) {
-		//	std::cout << "FILE1: " << file1_text;
-		//	std::cout << "FILE2: " << file2_text;
-		//	break;
-		//}
+
 		for (size_t i = 0; i < strlen(file2_text) || i < strlen(file1_text); i++) {
 			if (file1_text[i] != file2_text[i]) {
 				std::cout << "FILE1: " << file1_text << std::endl;
