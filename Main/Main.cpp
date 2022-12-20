@@ -22,18 +22,6 @@ int main() {
 		}
 		fputs(file1_text, file2);
 	}
-	//printf("Enter line: ");
-	//scanf("%[^\n]s",file_text);
-
-	//for (size_t i = 0;file_text[i]!='\0'; i++) {
-	//	if ((int)file_text[i] + 3 > 122)
-	//		file_text[i] = 97 + ((file_text[i] + 2) - 122);
-	//	else
-	//		file_text[i] += 3;
-	//}
-
-	//fputs(file_text, file);
-	
 
 	fclose(file1);
 	fclose(file2);
